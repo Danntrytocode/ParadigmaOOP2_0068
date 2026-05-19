@@ -15,4 +15,11 @@ class remoteLampu{
 
 int main(){
     remoteLampu HomeLamp;
+
+    HomeLamp.setSaklarNO(0, "Lampu Teras Rumah");
+    HomeLamp.setSaklarNO(1, "Lampu Ruang Tamu");
+    HomeLamp.setSaklarNO(2, "Lampu Kamar ");
+    HomeLamp.setSaklarNO(3, "Lampu Dapur ");
+    HomeLamp.setSaklarNO(4, "Lampu Kandang Ayam");
+
 }
