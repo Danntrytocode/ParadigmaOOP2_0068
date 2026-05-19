@@ -58,4 +58,18 @@ public:
     }
 };
 //New Class
-class RekeningPremium : public RekeningBank{};
+class RekeningPremium : public RekeningBank {
+public:
+    RekeningPremium(string noRek, string nama, double saldoAwal)
+        : RekeningBank(noRek, nama, saldoAwal) {}
+
+    //Aturan dinamis sesuai saldo akhir bulan
+    void potongAdmin() override {
+        if (Saldo > 10000000) { // Saldo > 10 Juta
+            cout << "[Premium] " << NamaNasabah << ": Saldo > Rp 10 Juta. Bebas biaya admin!\n";
+        } else { // Saldo <= 10 Juta
+            Saldo -= 50000;
+            cout << "[Premium] " << NamaNasabah << ": Saldo <= Rp 10 Juta. Dipotong Rp 50.000.\n";
+        }
+    }
+};
