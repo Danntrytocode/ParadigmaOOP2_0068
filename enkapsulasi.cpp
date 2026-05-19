@@ -12,3 +12,7 @@ class remoteLampu{
         return saklarNO[i];
     }
 };
+
+int main(){
+    remoteLampu HomeLamp;
+}
