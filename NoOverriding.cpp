@@ -14,3 +14,10 @@ class deviredClass : public baseClass{
             cout << "Hello i'm Function dari deviredClass, lol.";
         }
 };
+
+int main(){
+    deviredClass a;
+    a.perkenalan1();
+
+    return 0;
+}
