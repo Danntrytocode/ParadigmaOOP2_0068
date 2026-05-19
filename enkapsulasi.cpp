@@ -22,4 +22,11 @@ int main(){
     HomeLamp.setSaklarNO(3, "Lampu Dapur ");
     HomeLamp.setSaklarNO(4, "Lampu Kandang Ayam");
 
+    cout << HomeLamp.getSaklarNo(0) << endl;
+    cout << HomeLamp.getSaklarNo(1) << endl;
+    cout << HomeLamp.getSaklarNo(2) << endl;
+    cout << HomeLamp.getSaklarNo(3) << endl;
+    cout << HomeLamp.getSaklarNo(4) << endl;
+
+    return 0;
 }
