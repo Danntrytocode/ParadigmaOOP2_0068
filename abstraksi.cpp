@@ -20,6 +20,8 @@ class AbstraksiKlass{
 
 int main(){
     AbstraksiKlass ak;
+    ak.setXY("NewYork", "Campus");
+    ak.display();
 
     return 0;
 }
