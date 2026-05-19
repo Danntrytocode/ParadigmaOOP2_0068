@@ -11,8 +11,13 @@ class baseClass {
 class baseClass1 {
     public:
         virtual void perkenalan(){
-            cout << "Hallo saya Function dari baseClass satu";
+            cout << "Hallo saya Function dari baseClass satu :p";
         }
 };
 
-class deviredClass : public baseClass1{};
+class deviredClass : public baseClass1{
+    public:
+        void perkenalan(){
+            cout << "Hallo saya Function dari deviredClass :3";
+        }
+};
