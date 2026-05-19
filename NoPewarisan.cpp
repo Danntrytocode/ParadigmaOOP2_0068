@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
-class baseClass {};
+class baseClass {
+    public:
+        virtual void perkenalan(){
+            cout << "Hallo saya Function dari baseClass";
+        }
+};
+
 class baseClass1 {};
 class deviredClass : public baseClass1{};
