@@ -8,4 +8,9 @@ class baseClass{
         }
 };
 
-class deviredClass : public baseClass{};
+class deviredClass : public baseClass{
+    public:
+        void perkenalan1(){
+            cout << "Hello i'm Function dari deviredClass, lol.";
+        }
+};
