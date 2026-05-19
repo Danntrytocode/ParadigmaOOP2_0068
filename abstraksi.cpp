@@ -19,6 +19,7 @@ class AbstraksiKlass{
 };
 
 int main(){
+    AbstraksiKlass ak;
 
     return 0;
 }
