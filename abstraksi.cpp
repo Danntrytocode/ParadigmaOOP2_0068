@@ -17,3 +17,8 @@ class AbstraksiKlass{
             cout << "y = " << y << endl;
         }
 };
+
+int main(){
+
+    return 0;
+}
