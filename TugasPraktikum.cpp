@@ -14,9 +14,48 @@ Anda diminta untuk membantu tim developer Bank Gibran Jaya mengimplementasikan k
 #include <vector>
 using namespace std;
 
-class RekeningBank{};
-class RekeningSyariah : public RekeningBank {};
-class RekeningKonvensional : public RekeningBank {};
-//New Class
-class RekeningPremium : public RekeningBank {};
+class RekeningBank{
+    protected:
+        string RekeningNasabah;
+        string NamaNasabah;
+        double Saldo;   //malaz pakai int
+    public:
+    RekeningBank(string noRek, string nama, double saldoAwal) 
+        : RekeningNasabah(noRek), NamaNasabah(nama), Saldo(saldoAwal) {}
 
+    //Pure Virtual Function
+    virtual void potongAdmin() = 0;
+
+    //Fungsf menampilkan informasi rekening
+    virtual void tampilkanInfo() const {
+        cout << "Nasabah: " << NamaNasabah << " | No. Rek: " << RekeningNasabah << "Saldo Akhir: Rp " << Saldo << endl;
+    }
+    //virtual destructor
+    virtual ~RekeningBank() {}
+};
+
+class RekeningSyariah : public RekeningBank {
+public:
+    RekeningSyariah(string noRek, string nama, double saldoAwal)
+        : RekeningBank(noRek, nama, saldoAwal) {}
+
+    //Syariah: Bebas biaya admin (saldo tetap utuh)
+    void potongAdmin() override {
+        // Tidak ada pemotongan saldo
+        cout << "[Syariah] " << NamaNasabah << ": Bebas biaya admin. Saldo tetap utuh.\n";
+    }
+};
+
+class RekeningKonvensional : public RekeningBank {
+public:
+    RekeningKonvensional(string noRek, string nama, double saldoAwal)
+        : RekeningBank(noRek, nama, saldoAwal) {}
+
+    // Potongan tetap Rp 15.000 setiap bulan
+    void potongAdmin() override {
+        Saldo -= 15000;
+        cout << "[Konvensional] " << NamaNasabah << ": Berhasil dipotong Rp 15.000.\n";
+    }
+};
+//New Class
+class RekeningPremium : public RekeningBank{};
