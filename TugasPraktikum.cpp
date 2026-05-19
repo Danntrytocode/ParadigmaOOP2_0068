@@ -11,4 +11,12 @@ dari biaya admin, namun jika saldonya di bawah atau sama dengan Rp 10.000.000,
 maka sistem akan memotong saldo sebesar Rp 50.000. 
 Anda diminta untuk membantu tim developer Bank Gibran Jaya mengimplementasikan kelas baru ini ke dalam arsitektur sistem yang sudah ada.*/
 #include <iostream>
+#include <vector>
 using namespace std;
+
+class RekeningBank{};
+class RekeningSyariah : public RekeningBank {};
+class RekeningKonvensional : public RekeningBank {};
+//New Class
+class RekeningPremium : public RekeningBank {};
+
