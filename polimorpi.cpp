@@ -16,5 +16,8 @@ class Ucup :public Seseorang{
         }
 };
 class Lia :public Seseorang{
-    
+    public:
+        void pesan(){
+            cout << "pesan dari Lia" << endl;
+        }
 };
