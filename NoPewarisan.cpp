@@ -21,3 +21,10 @@ class deviredClass : public baseClass1{
             cout << "Hallo saya Function dari deviredClass :3";
         }
 };
+
+int main(){
+    deviredClass a;
+    a.perkenalan();
+
+    return 0;
+}
