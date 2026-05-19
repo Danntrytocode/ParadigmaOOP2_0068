@@ -73,3 +73,34 @@ public:
         }
     }
 };
+
+//Simulasi
+int main() {
+    cout << "=== BANK GIBRAN JAYA - OTOMATISASI AKHIR BULAN ===\n" << endl;
+
+    //Server menampung semua jenis rekening
+    vector<RekeningBank*> daftarRekening;
+    //Registrasi data nasabah dan nasabah premium baru
+    new RekeningSyariah("SYR-001", "Aldi Taher", 5000000);
+    new RekeningKonvensional("KON-002", "Rafi Ahmed", 2000000);
+    //Saldo >= 10 Juta (Bebas Admin)
+    new RekeningPremium("PRM-003", "Bacharuddin Jusuf Habibie", 15000000);
+    //Saldo <= 10 Juta (Kena 50 Ribu)
+    new RekeningPremium("PRM-004", "Dedi Mulyadi", 8000000);
+
+    cout << "--- Melakukan Proses Pemotongan Admin Otomatis ---" << endl;
+    for (RekeningBank* rkn : daftarRekening){
+        rkn->potongAdmin(); // Memanggil fungsi yang tepat secara (Polymorphism)
+    }
+    cout << endl << "--- Status Saldo Akhir Setelah Pemrosesan ---" << endl;
+    for (const RekeningBank* rkn : daftarRekening){
+        rkn->tampilkanInfo();
+    }
+    // Cleanup memori untuk menghindari memory leak
+    for (RekeningBank* rkn : daftarRekening) {
+        delete rkn;
+    }
+    daftarRekening.clear();
+
+    return 0;
+}
