@@ -9,5 +9,12 @@ class Seseorang{
         }*/
 };
 
-class Ucup :public Seseorang{};
-class Lia :public Seseorang{}:
+class Ucup :public Seseorang{
+    public:
+        void pesan(){
+            cout << "Pesan Dari Ucup" << endl;
+        }
+};
+class Lia :public Seseorang{
+    
+};
