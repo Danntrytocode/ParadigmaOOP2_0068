@@ -21,3 +21,11 @@ class Lia :public Seseorang{
             cout << "pesan dari Lia" << endl;
         }
 };
+
+int main(){
+    Seseorang* obyek;
+    Ucup a;
+    Lia b;
+    
+    return 0;
+}
