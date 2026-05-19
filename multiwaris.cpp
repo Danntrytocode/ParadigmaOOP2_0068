@@ -18,5 +18,12 @@ class Pekerja : virtual public Orang {
         } 
 };
 
-class Pelajar : virtual public Orang{};
+class Pelajar : virtual public Orang{
+    public:
+    Pelajar(int pUmur) : Orang(pUmur)
+    {
+        cout << "Pelajar dibuat\n" << endl;
+    }
+};
+
 class Ucup : public Pekerja, public Pelajar{};
