@@ -27,6 +27,7 @@ class Pelajar : virtual public Orang{
 };
 
 class Ucup : public Pekerja, public Pelajar{
+    public:
     Ucup(int pUmur) :
         Pekerja(pUmur),
         Pelajar(pUmur),
@@ -35,3 +36,9 @@ class Ucup : public Pekerja, public Pelajar{
         cout << "Budi dibuat\n" << endl;
     }
 };
+
+int main(){
+    Ucup a(12);
+
+    return 0;
+}
